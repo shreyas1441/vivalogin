@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelli-Genius</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <style>
+        /* Add any additional styles as needed */
+    </style>
+</head>
+
+<body>
+
+    <!-- Video background -->
+    <video autoplay loop muted playsinline id="background-video">
+        <source src="back2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Header with added image and toggle-switch-container -->
+    <header>
+        <div class="header-content">
+
+            <div class="toggle-switch-container">
+
+                <img src="speak.png" alt="Header Image" class="header-image">
+                <label class="switch">
+                    <input type="checkbox" id="speechToggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="toggle-label">Speak</span>
+                <h1 class="Intellig">Intelli-Genius</h1>
+            </div>
+
+        </div>
+    </header>
+
+    <div id="image-preview-container">
+        <img id="image-preview" alt="Image Preview" />
+    </div>
+
+    <div id="chat-container">
+        <div class="message-container">
+            <!-- Messages will be dynamically added here -->
+        </div>
+    </div>
+
+    <div id="input-container">
+        <input type="text" id="user-input" class="smallinput" placeholder="Type your message..." />
+
+        <!-- Image button for image input -->
+        <img src="fie.gif" alt="Image" class="image-button" onclick="document.getElementById('image-input').click()" />
+        <input type="file" id="image-input" accept="image/*" style="display: none;" />
+
+        <img src="send.png" alt="Send" id="send-button" class="image-button" />
+        <img src="mic.png" alt="Microphone" id="mic-button" class="image-button" />
+    </div>
+
+    <script type="importmap">
+        { "imports": { "@google/generative-ai": "https://esm.run/@google/generative-ai" } }
+    </script>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
